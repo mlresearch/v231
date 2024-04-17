@@ -1,0 +1,88 @@
+---
+booktitle: Proceedings of the Second Learning on Graphs Conference
+conference_number: '2'
+end: 2023-11-30
+published: 2024-04-17
+sections:
+- name: Preface
+  title: Preface
+- name: Oral Presentations
+  title: Oral Presentations
+- name: Poster Presentations
+  title: Poster Presentations
+shortname: LoG
+start: 2023-11-27
+volume: '231'
+year: '2023'
+layout: proceedings
+series: Proceedings of Machine Learning Research
+publisher: PMLR
+issn: 2640-3498
+id: log23
+month: 0
+cycles: false
+bibtex_editor: Villar, Soledad and Chamberlain, Benjamin
+editor:
+- given: Soledad
+  family: Villar
+- given: Benjamin
+  family: Chamberlain
+title: Proceedings of Machine Learning Research
+description: |
+  Proceedings of the Second Learning on Graphs Conference
+    Held in Virtual on 27-30 November 2023
+
+  Published as Volume 231 by the Proceedings of Machine Learning Research on 17 April 2024.
+
+  Volume Edited by:
+    Soledad Villar
+    Benjamin Chamberlain
+
+  Series Editors:
+    Neil D. Lawrence
+date_str: 27--30 Nov
+url: https://proceedings.mlr.press
+author:
+  name: PMLR
+baseurl: "/v231"
+twitter_username: MLResearchPress
+github_username: mlresearch
+markdown: kramdown
+exclude:
+- README.md
+- Gemfile
+- ".gitignore"
+plugins:
+- jekyll-feed
+- jekyll-seo-tag
+- jekyll-remote-theme
+remote_theme: mlresearch/jekyll-theme
+style: pmlr
+permalink: "/:title.html"
+ghub:
+  edit: true
+  repository: v231
+display:
+  copy_button:
+    bibtex: true
+    endnote: true
+    apa: true
+  comments: false
+volume_type: Volume
+volume_dir: v231
+email: ''
+conference:
+  name: Learning on Graphs Conference
+  url: https://logconference.org/
+  location: Virtual
+  dates:
+  - 2023-11-27
+  - 2023-11-28
+  - 2023-11-29
+  - 2023-11-30
+analytics:
+  google:
+    tracking_id: UA-92432422-1
+orig_bibfile: "/Users/neil/mlresearch/v231/log23.bib"
+# Site settings
+# Original source:  /Users/neil/mlresearch/v231/log23.bib

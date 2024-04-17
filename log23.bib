@@ -1,0 +1,450 @@
+@proceedings{log23,
+  address = {Virtual},
+  booktitle = {Proceedings of the Second Learning on Graphs Conference},
+  conference_number = {2},
+  conference_url = {https://logconference.org/},
+  editor = {Soledad Villar and Benjamin Chamberlain},
+  end = {2023-11-30},
+  name = {Learning on Graphs Conference},
+  published = {2023-11-27},
+  sections = {Preface|Oral Presentations|Poster Presentations},
+  shortname = {LoG},
+  start = {2023-11-27},
+  published = {2024-04-17},
+  volume = {231},
+  year = {2023}
+}
+
+@inproceedings{bainson23a,
+  abstract = {Several graph analysis problems are based on some variant of subgraph isomorphism: Given two graphs, G and Q, does G contain a subgraph isomorphic to Q? As this problem is NP-complete, past work usually avoids addressing it explicitly. In this paper, we propose a method that localizes, i.e., finds the best-match position of, Q in G, by aligning their Laplacian spectra and enhance its stability via bagging strategies; we relegate the finding of an exact node correspondence from Q to G to a subsequent and separate graph alignment task. We demonstrate that our localization strategy outperforms a baseline based on the state-of-the-art method for graph alignment in terms of accuracy on real graphs and scales to hundreds of nodes as no other method does.},
+  author = {Ama Bembua Bainson and Judith Hermanns and Petros Petsinis and Niklas Aavad and Casper Dam Larsen and Tiarnan Swayne and Amit Boyarski and Davide Mottin and Alex M. Bronstein and Panagiotis Karras},
+  openreview = {zrOMpghV0M},
+  pages = {7:1--7:11},
+  section = {Poster Presentations},
+  title = {Spectral Subgraph Localization}
+}
+
+@inproceedings{baltatzis23a,
+  abstract = {Despite being the go-to choice for link prediction on knowledge graphs, research on interpretability of knowledge graph embeddings (KGE) has been relatively unexplored.
+We present KGEx, a novel post-hoc method that explains individual link predictions by drawing inspiration from surrogate models research. Given a target triple to predict, KGEx trains surrogate KGE models that we use to identify important training triples.
+To gauge the impact of a training triple, we sample random portions of the target triple neighborhood and we train multiple surrogate KGE models on each of them. To ensure faithfulness, each surrogate is trained by distilling knowledge from the original KGE model.
+We then assess how well surrogates predict the target triple being explained, the intuition being that those leading to faithful predictions have been trained on \textasciigrave \textasciigrave impactful\textquotesingle \textquotesingle  neighborhood samples. Under this assumption, we then harvest triples that appear frequently across impactful neighborhoods. 
+We conduct extensive experiments on two publicly available datasets, to demonstrate that KGEx is capable of providing explanations faithful to the black-box model.},
+  author = {Vasileios Baltatzis and Luca Costabello},
+  openreview = {NSXXSyc2DF},
+  pages = {27:1--27:13},
+  section = {Poster Presentations},
+  software = {https://github.com/Accenture/AmpliGraph},
+  title = {KGEx: Explaining Knowledge Graph Embeddings via Subgraph Sampling and Knowledge Distillation}
+}
+
+@inproceedings{besta23a,
+  abstract = {Many graph representation learning (GRL) problems are dynamic, with millions
+of edges added or removed per second. A fundamental workload in this setting
+is dynamic link prediction: using a history of graph updates to predict whether a
+given pair of vertices will become connected. Recent schemes for link predic-
+tion in such dynamic settings employ Transformers, modeling individual graph
+updates as single tokens. In this work, we propose HOT: a model that enhances
+this line of works by harnessing higher-order (HO) graph structures; specifically,
+k-hop neighbors and more general subgraphs containing a given pair of vertices.
+Harnessing such HO structures by encoding them into the attention matrix of the
+underlying Transformer results in higher accuracy of link prediction outcomes,
+but at the expense of increased memory pressure. To alleviate this, we resort to
+a recent class of schemes that impose hierarchy on the attention matrix, signifi-
+cantly reducing memory footprint. The final design offers a sweetspot between
+high accuracy and low memory utilization. HOT outperforms other dynamic
+GRL schemes, for example achieving 9\%, 7\%, and 15\% higher accuracy than \textendash 
+respectively \textendash  DyGFormer, TGN, and GraphMixer, for the MOOC dataset. Our
+design can be seamlessly extended towards other dynamic GRL workloads.},
+  author = {Maciej Besta and Afonso Claudino Catarino and Lukas Gianinazzi and Nils Blach and Piotr Nyczyk and Hubert Niewiadomski and Torsten Hoefler},
+  openreview = {edAX8h5mdA},
+  pages = {15:1--15:20},
+  section = {Poster Presentations},
+  title = {HOT: Higher-Order Dynamic Graph Representation Learning With Efficient Transformers}
+}
+
+@inproceedings{bhaskar23a,
+  abstract = {Complex systems are characterized by intricate interactions between entities that evolve dynamically over time. Accurate inference of these dynamic relationships is crucial for understanding and predicting system behavior. In this paper, we propose Regulatory Temporal Interaction Network Inference (RiTINI) for inferring time-varying interaction graphs in complex systems using a novel combination of space-and-time graph attentions and graph neural ordinary differential equations (ODEs). RiTINI leverages time-lapse signals on a graph prior, as well as perturbations of signals at various nodes in order to effectively capture the dynamics of the underlying system. This approach is distinct from traditional causal inference networks, which are limited to inferring acyclic and static graphs. In contrast, RiTINI can infer cyclic, directed, and time-varying graphs, providing a more comprehensive and accurate representation of complex systems. The graph attention mechanism in RiTINI allows the model to adaptively focus on the most relevant interactions in time and space, while the graph neural ODEs enable continuous-time modeling of the system\textquotesingle s dynamics. We evaluate RiTINI\textquotesingle s performance on simulations of dynamical systems, neuronal networks, and gene regulatory networks, demonstrating its state-of-the-art capability in inferring interaction graphs compared to previous methods.},
+  author = {Dhananjay Bhaskar and Daniel Sumner Magruder and Matheo Morales and Edward De Brouwer and Aarthi Venkat and Frederik Wenkel and Guy Wolf and Smita Krishnaswamy},
+  openreview = {ZObhwMbBA9},
+  pages = {22:1--22:21},
+  section = {Poster Presentations},
+  title = {Inferring Dynamic Regulatory Interaction Graphs From Time Series Data With Perturbations}
+}
+
+@inproceedings{chen23a,
+  abstract = {Topological data analysis (TDA) is gaining prominence across a wide spectrum of machine learning  tasks that spans from manifold learning to graph classification. A pivotal technique within TDA is persistent homology (PH), which furnishes an exclusive topological imprint of data by tracing the evolution of latent structures as a scale parameter changes. Present PH tools are confined to analyzing data through a single filter parameter. However, many scenarios necessitate the consideration of multiple relevant parameters to attain finer insights into the data.
+
+We address this issue by introducing the Effective Multidimensional Persistence (EMP) framework. This framework empowers the exploration of data by simultaneously varying multiple scale parameters. The framework integrates descriptor functions into the analysis process, yielding a highly expressive data summary. It seamlessly integrates established single PH summaries into multidimensional counterparts like EMP Landscapes, Silhouettes, Images, and Surfaces. These summaries represent data\textquotesingle s multidimensional aspects as matrices and arrays, aligning effectively with diverse ML models. We provide theoretical guarantees and stability proofs for EMP summaries. We demonstrate EMP\textquotesingle s utility in graph classification tasks, showing its effectiveness. Results reveal EMP enhances various single PH descriptors, outperforming cutting-edge methods on multiple benchmark datasets.},
+  author = {Yuzhou Chen and Ignacio Segovia-Dominguez and Cuneyt Gurcan Akcora and Zhiwei Zhen and Murat Kantarcioglu and Yulia Gel and Baris Coskunuzer},
+  openreview = {WScCJnX4ek},
+  pages = {24:1--24:12},
+  section = {Poster Presentations},
+  title = {EMP: Effective Multidimensional Persistence for Graph Representation Learning}
+}
+
+@inproceedings{dudzik23a,
+  abstract = {State-of-the-art neural algorithmic reasoners make use of message passing in graph neural networks (GNNs). But typical GNNs blur the distinction between the definition and invocation of the message function, forcing a node to send messages to its neighbours at every layer, synchronously. When applying GNNs to learn to execute dynamic programming algorithms, however, on most steps only a handful of the nodes would have meaningful updates to send. One, hence, runs the risk of inefficiencies by sending too much irrelevant data across the graph. But more importantly, many intermediate GNN steps have to learn the identity functions, which is a non-trivial learning problem. In this work, we explicitly separate the concepts of node state update and message function invocation. With this separation, we obtain a mathematical formulation that allows us to reason about asynchronous computation in both algorithms and neural networks. Our analysis yields several practical implementations of synchronous scalable GNN layers that are provably invariant under various forms of asynchrony.},
+  author = {Andrew Joseph Dudzik and Tamara von Glehn and Razvan Pascanu and Petar Veli{\v c}kovi{\' c}},
+  openreview = {ba4bbZ4KoF},
+  pages = {3:1--3:17},
+  section = {Oral Presentations},
+  title = {Asynchronous Algorithmic Alignment With Cocycles}
+}
+
+@inproceedings{engelmayer23a,
+  abstract = {Neural algorithmic reasoners are parallel processors. Teaching them sequential algorithms contradicts this nature, rendering a significant share of their computations redundant. Parallel algorithms however may exploit their full computational power, therefore requiring fewer layers to be executed. This drastically reduces training times, as we observe when comparing parallel implementations of searching, sorting and finding strongly connected components to their sequential counterparts on the CLRS framework. Additionally, parallel versions achieve strongly superior predictive performance in most cases.},
+  author = {Valerie Engelmayer and Dobrik Georgiev Georgiev and Petar Veli{\v c}kovi{\' c}},
+  openreview = {IC6kpv87LB},
+  pages = {31:1--31:13},
+  section = {Poster Presentations},
+  title = {Parallel Algorithms Align With Neural Execution}
+}
+
+@inproceedings{faber23a,
+  abstract = {This paper studies the relation between Graph Neural Networks and Distributed Computing Models to propose a new framework for Learning in Graphs. Current Graph Neural Networks (GNNs) are closely related to the synchronous model from distributed computing. Nodes operate in rounds and receive neighborhood information aggregated and at the same time. Our new framework, on the other hand, proposes GNNs with Asynchronous Communication: Every message is received individually and at potentially different times. We prove this framework must be at least as expressive as the existing synchronous framwork. We further analyze GwAC theoretically and practically with regard to several GNN problems: Expressiveness beyond 1-Weisfeiler Lehman (1WL), Underreaching, and Oversmoothing. GwAC shows promising improvements for all problems. We finish with a practical study on how to implement GwAC GNNs efficiently.},
+  author = {Lukas Faber and Roger Wattenhofer},
+  openreview = {zffXH0sEJP},
+  pages = {8:1--8:20},
+  section = {Poster Presentations},
+  software = {https://github.com/lukasjf/gwac/},
+  title = {GwAC: GNNs With Asynchronous Communication}
+}
+
+@inproceedings{ferrini23a,
+  abstract = {Existing multi-relational graph neural networks use one of two strategies for identifying informative relations: either they reduce this problem to low-level weight learning, or they rely on handcrafted chains of relational dependencies, called meta-paths. However, the former approach faces challenges in the presence of many relations (e.g., knowledge graphs), while the latter requires substantial domain expertise to identify relevant meta-paths. In this work we propose a novel approach to learn meta-paths and meta-path GNNs that are highly accurate based on a small number of informative meta-paths. Key element of our approach is a scoring function for measuring the potential informativeness of a relation in the incremental construction of the meta-path. Our experimental evaluation shows that the approach manages to correctly identify relevant meta-paths even with a large number of relations, and substantially outperforms existing multi-relational GNNs on synthetic and real-world experiments.},
+  author = {Francesco Ferrini and Antonio Longa and Andrea Passerini and Manfred Jaeger},
+  openreview = {gW9ZmT9hAe},
+  pages = {2:1--2:17},
+  section = {Oral Presentations},
+  title = {Meta-Path Learning for Multi-Relational Graph Neural Networks}
+}
+
+@inproceedings{fesser23a,
+  abstract = {While Graph Neural Networks (GNNs) have been successfully leveraged for learning on graph-structured data across domains, several potential pitfalls have been described recently. Those include the inability to accurately leverage information encoded in long-range connections (over-squashing), as well as difficulties distinguishing the learned representations of nearby nodes with growing network depth (over-smoothing). An effective way to characterize both effects is discrete curvature: Long-range connections that underlie over-squashing effects have low curvature, whereas edges that contribute to over-smoothing have high curvature. This observation has given rise to rewiring techniques, which add or remove edges to mitigate over-smoothing and over-squashing. Several rewiring approaches utilizing graph characteristics, such as curvature or the spectrum of the graph Laplacian, have been proposed. However, existing methods, especially those based on curvature, often require expensive subroutines and careful hyperparameter tuning, which limits their applicability to large-scale graphs. Here we propose a rewiring technique based on Augmented Forman-Ricci curvature (AFRC), a scalable curvature notation, which can be computed in linear time. We prove that AFRC effectively characterizes over-smoothing and over-squashing effects in message-passing GNNs. We complement our theoretical results with experiments, which demonstrate that the proposed approach achieves state-of-the-art performance while significantly reducing the computational cost in comparison with other methods. Utilizing fundamental properties of discrete curvature, we propose effective heuristics for hyperparameters in curvature-based rewiring, which avoids expensive hyperparameter searches, further improving the scalability of the proposed approach.},
+  author = {Lukas Fesser and Melanie Weber},
+  openreview = {bKTkZMRtfC},
+  pages = {19:1--19:28},
+  section = {Poster Presentations},
+  title = {Mitigating Over-Smoothing and Over-Squashing Using Augmentations of Forman-Ricci Curvature}
+}
+
+@inproceedings{fu23a,
+  abstract = {Proteins are complex biomolecules that perform a variety of crucial functions within living organisms. Designing and generating novel proteins can pave the way for many future synthetic biology applications, including drug discovery. However, it remains a challenging computational task due to the large modeling space of protein structures. In this study, we propose a latent diffusion model that can reduce the complexity of protein modeling while flexibly capturing the distribution of natural protein structures in a condensed latent space. Specifically, we propose an equivariant protein autoencoder that embeds proteins into a latent space and then uses an equivariant diffusion model to learn the distribution of the latent protein representations. Experimental results demonstrate that our method can effectively generate novel protein backbone structures with high designability and efficiency. The code will be made publicly available at https://github.com/divelab/AIRS/tree/main/OpenProt/LatentDiff},
+  author = {Cong Fu and Keqiang Yan and Limei Wang and Wing Yee Au and Michael Curtis McThrow and Tao Komikado and Koji Maruhashi and Kanji Uchino and Xiaoning Qian and Shuiwang Ji},
+  openreview = {MBZVrtbi06},
+  pages = {29:1--29:17},
+  section = {Poster Presentations},
+  title = {A Latent Diffusion Model for Protein Structure Generation}
+}
+
+@inproceedings{fu23b,
+  abstract = {Physical simulations of fluids are crucial for understanding fluid dynamics across many applications, such as weather prediction and engineering design. While high-resolution numerical simulations can provide substantial accuracy in analysis, it also results in prohibitive computational costs. Conversely, lower-resolution simulations are computationally less expensive but compromise the accuracy and reliability of results. In this work, we propose a cascaded fluid reconstruction framework to combine large amounts of low-resolution and limited amounts of paired high-resolution direct simulations for accurate fluid analysis. Our method can improve the accuracy of simulations while preserving the efficiency of low-resolution simulations. Our framework involves a proposal network, pre-trained with small amounts of high-resolution labels, to reconstruct an initial high-resolution flow field. The field is then refined in the frequency domain to become more physically plausible using our proposed refinement network, known as ModeFormer, which is implemented as a complex-valued transformer, with physics-informed unsupervised training. Our experimental results demonstrate the effectiveness of our approach in enhancing the overall performance of fluid flow reconstruction. The code will be made publicly available at https://github.com/divelab/AIRS/tree/main/OpenPDE/CFRF},
+  author = {Cong Fu and Jacob Helwig and Shuiwang Ji},
+  openreview = {695IYJh1Ba},
+  pages = {36:1--36:19},
+  section = {Poster Presentations},
+  title = {Semi-Supervised Learning for High-Fidelity Fluid Flow Reconstruction}
+}
+
+@inproceedings{georgiev23a,
+  abstract = {Solving NP-hard/complete combinatorial problems with neural networks is a challenging research area that aims to surpass classical approximate algorithms. The long-term objective is to outperform hand-designed heuristics for NP-hard/complete problems by learning to generate superior solutions solely from training data. Current neural-based methods for solving CO problems often overlook the inherent "algorithmic" nature of the problems. In contrast, heuristics designed for CO problems, e.g. TSP, frequently leverage well-established algorithms, such as those for finding the minimum spanning tree. In this paper, we propose leveraging recent advancements in neural algorithmic reasoning to improve the learning of CO problems. Specifically, we suggest pre-training our neural model on relevant algorithms before training it on CO instances. Our results demonstrate that, using this learning setup, we achieve superior performance compared to non-algorithmically informed deep learning models.},
+  author = {Dobrik Georgiev Georgiev and Danilo Numeroso and Davide Bacciu and Pietro Lio},
+  openreview = {N8awTT5ep7},
+  pages = {28:1--28:15},
+  section = {Poster Presentations},
+  software = {https://github.com/danilonumeroso/conar},
+  title = {Neural Algorithmic Reasoning for Combinatorial Optimisation}
+}
+
+@inproceedings{grande23a,
+  abstract = {Persistent Homology is a widely used topological data analysis tool that creates a concise description of the topological properties of a point cloud based on a specified filtration.
+Most filtrations used for persistent homology depend (implicitly) on a chosen metric, which is typically agnostically chosen as the standard Euclidean metric on \textdollar \textbackslash mathbb{R}\^{}n\textdollar .
+Recent work has tried to uncover the true metric on the point cloud using distance-to-measure functions, in order to obtain more meaningful persistent homology results.
+Here we propose an alternative look at this problem:
+we posit that information on the point cloud is lost when restricting persistent homology to a single (correct) distance function.
+Instead, we show how by varying the distance function on the underlying space and analysing the corresponding shifts in the persistence diagrams, we can extract additional topological and geometrical information.
+Finally, we numerically show that non-isotropic persistent homology can extract information on orientation, orientational variance, and scaling of randomly generated point clouds with good accuracy and conduct some experiments on real-world data.},
+  author = {Vincent Peter Grande and Michael T Schaub},
+  openreview = {cewQK9Sjvh},
+  pages = {17:1--17:19},
+  section = {Poster Presentations},
+  software = {https://git.rwth-aachen.de/netsci/publication-2023-non-isotropic-persistent-homology},
+  title = {Non-Isotropic Persistent Homology: Leveraging the Metric Dependency of PH}
+}
+
+@inproceedings{gu23a,
+  abstract = {Graph anomaly detection plays a vital role for identifying abnormal instances in complex networks. Despite advancements of methodology based on deep learning in recent years, existing benchmarking approaches exhibit limitations that hinder a comprehensive comparison. In this paper, we revisit datasets and approaches for unsupervised node-level graph anomaly detection tasks from three aspects. Firstly, we introduce outlier injection methods that create more diverse and graph-based anomalies in graph datasets. Secondly, we compare methods employing message passing against those without, uncovering the unexpected decline in performance associated with message passing. Thirdly, we explore the use of hyperbolic neural networks, specifying crucial architecture and loss design that contribute to enhanced performance. Through rigorous experiments and evaluations, our study sheds light on general strategies for improving node-level graph anomaly detection methods.},
+  author = {Jing Gu and Dongmian Zou},
+  openreview = {fNsU9gi1Fy},
+  pages = {14:1--14:29},
+  section = {Poster Presentations},
+  title = {Three Revisits to Node-Level Graph Anomaly Detection: Outliers, Message Passing and Hyperbolic Neural Networks}
+}
+
+@inproceedings{harari23a,
+  abstract = {Graph Clustering is required for the identification of communities and groups within a given network.
+In recent years, various attempts have been made to develop tools suitable for this purpose.
+Most recently, these attempts are based on the latest advancements in deep learning and especially in Graph Neural Networks (GNN).
+While some methods take into account the graph intrinsic topological structure throughout, surprisingly, the leading clustering methods ignore this during the final cluster assignment stage, which leads to sub-optimal results.  
+In this paper, we propose GSCAN: a Graph Stability Clustering for Applications with Noise, which is based both on node features and on the graph structure.
+We base our approach on the celebrated method of Exess-of-Mass (EoM), which is based the principle of maximizing cluster stability. 
+This method has additional desirable properties like resilience to outliers and the fact it doesn\textquotesingle t require an a-priory definition of the number of clusters.
+We extend EoM to work on the \ast intrinsic\ast  graph structure and propose two possible post-processes to deal with one of EoM\textquotesingle s shortcomings - its tendency to over-flagging data-points as outliers.
+These post processes harness the graph topology and lead to superior performance, even compared to leading clustering approaches that are trained end-to-end.
+We show that the proposed approach can be implemented in a fast and scalable manner.
+Our claims are backed on three well-known benchmark datasets.  
+Our code is available here: https://github.com/GraphEoM/GSCAN},
+  author = {Etzion Harari and Naphtali Abudarham and Roee Litman},
+  openreview = {xazYC6pGO5},
+  pages = {9:1--9:15},
+  section = {Poster Presentations},
+  software = {https://github.com/GraphEoM/GSCAN},
+  title = {GSCAN: Graph Stability Clustering for Applications With Noise Using Edge-Aware Excess-of-Mass}
+}
+
+@inproceedings{hayhoe23a,
+  abstract = {Hypergraphs model higher-order interactions in complex systems, e.g., chemicals reacting only in the presence of an enzyme or rumors spreading across groups, and encompass both the notion of an undirected graph and a simplicial complex. Nonetheless, due to computational complexity, machine learning on hypergraph-structured data is notoriously challenging. In an effort to transfer hypergraph neural network models, addressing this challenge, we extend results on the transferability of Graph Neural Networks (GNNs) to design a convolutional architecture for processing signals supported on hypergraphs via GNNs, which we call Hypergraph Expansion Neural Networks (HENNs). Exploiting multiple spectrally-similar graph representations of hypergraphs, we establish bounds on the transferability error. Experimental results illustrate the importance of considering multiple graph representations in HENNs, and show promise of superior performance when transferability is required.},
+  author = {Mikhail Hayhoe and Hans Matthew Riess and Michael M. Zavlanos and VICTOR PRECIADO and Alejandro Ribeiro},
+  openreview = {cHuii4NOB9},
+  pages = {18:1--18:23},
+  section = {Poster Presentations},
+  software = {https://github.com/MHayhoe/HGLearning},
+  title = {Transferable Hypergraph Neural Networks via Spectral Similarity}
+}
+
+@inproceedings{he23a,
+  abstract = {Networks are ubiquitous in many real-world applications (e.g., social networks encoding trust/distrust relationships, correlation networks arising from time series data). While many networks are signed or directed, or both, there is a lack of unified software packages on graph neural networks (GNNs) specially designed for signed and directed networks. In this paper, we present PyTorch Geometric Signed Directed (PyGSD), a software package which fills this gap. Along the way, we evaluate the implemented methods with experiments with a view to providing insights into which method to choose for a given task. The deep learning framework consists of easy-to-use GNN models, synthetic and real-world data, as well as task-specific evaluation metrics and loss functions for signed and directed networks. As an extension library for PyG, our proposed software is maintained with open-source releases, detailed documentation, continuous integration, unit tests and code coverage checks. The GitHub repository of the library is https://github.com/SherylHYX/pytorch\_geometric\_signed\_directed.},
+  author = {Yixuan He and Xitong Zhang and Junjie Huang and Benedek Rozemberczki and Mihai Cucuringu and Gesine Reinert},
+  openreview = {mni7vnYmvY},
+  pages = {12:1--12:27},
+  section = {Poster Presentations},
+  software = {https://github.com/SherylHYX/pytorch_geometric_signed_directed},
+  title = {PyTorch Geometric Signed Directed: A Software Package on Graph Neural Networks for Signed and Directed Graphs}
+}
+
+@inproceedings{hoppe23a,
+  abstract = {Obtaining sparse, interpretable representations of observable data is crucial in many machine learning and signal processing tasks.
+For data representing flows along the edges of a graph, an intuitively interpretable way to obtain such representations is to lift the graph structure to a simplicial complex:
+The eigenvectors of the associated Hodge-Laplacian, respectively the incidence matrices of the corresponding simplicial complex then induce a Hodge decomposition, which can be used to represent the observed data in terms of gradient, curl, and harmonic flows.
+In this paper, we generalize this approach to cellular complexes and introduce the flow representation learning problem, i.e., the problem of augmenting the observed graph by a set of cells, such that the eigenvectors of the associated Hodge Laplacian provide a sparse, interpretable representation of the observed edge flows on the graph.
+We show that this problem is NP-hard and introduce an efficient approximation algorithm for its solution.
+Experiments on real-world and synthetic data demonstrate that our algorithm outperforms state-of-the-art methods with respect to approximation error, while being computationally efficient.},
+  author = {Josef Hoppe and Michael T Schaub},
+  openreview = {qix189lq5D},
+  pages = {1:1--1:22},
+  section = {Oral Presentations},
+  software = {https://github.com/josefhoppe/edge-flow-cell-complexes},
+  title = {Representing Edge Flows on Graphs via Sparse Cell Complexes}
+}
+
+@inproceedings{hua23a,
+  abstract = {Molecule generation is a very important practical problem, with uses in drug discovery and material design, and AI methods promise to provide useful solutions. However, existing methods for molecule generation focus either on 2D graph structure or on 3D geometric structure, which is not sufficient to represent a complete molecule as 2D graph captures mainly topology while 3D geometry captures mainly spatial atom arrangements. Combining these representations is essential to better represent a molecule. In this paper, we present a new model for generating a comprehensive representation of molecules, including atom features, 2D discrete molecule structures, and 3D continuous molecule coordinates, by combining discrete and continuous diffusion processes. The use of diffusion processes allows for capturing the probabilistic nature of molecular processes and exploring the effect of different factors on molecular structures. Additionally, we propose a novel graph transformer architecture to denoise the diffusion process. The transformer adheres to 3D roto-translation equivariance constraints, allowing it to learn invariant atom and edge representations while preserving the equivariance of atom coordinates. This transformer can be used to learn molecular representations robust to geometric transformations. We evaluate the performance of our model through experiments and comparisons with existing methods, showing its ability to generate more stable and valid molecules. Our model is a promising approach for designing stable and diverse molecules and can be applied to a wide range of tasks in molecular modeling. Our codes and models are available on \textbackslash red{\textbackslash url{https://github.com/WillHua127/mudiff}}
+\textbackslash end{abstract}},
+  author = {Chenqing Hua and Sitao Luan and Minkai Xu and Zhitao Ying and Jie Fu and Stefano Ermon and Doina Precup},
+  openreview = {C7Z3yhWUAU},
+  pages = {33:1--33:26},
+  section = {Poster Presentations},
+  software = {https://github.com/WillHua127/mudiff},
+  title = {MUDiff: Unified Diffusion for Complete Molecule Generation}
+}
+
+@inproceedings{jaeger23a,
+  abstract = {We introduce a probabilistic latent variable  model for graphs that generalizes both the established graphon and stochastic block models. This naive histogram AHK model is simple and versatile, and we demonstrate its use for disparate tasks including complex predictive inference usually not supported by other approaches, and graph generation.  We analyze the tradeoffs entailed by the simplicity of the model, which imposes certain limitations on expressivity on the one hand, but on the other hand leads to robust generalization capabilities to graph sizes different from what was seen in the training data.},
+  author = {Manfred Jaeger and Antonio Longa and Steve Azzolin and Oliver Schulte and Andrea Passerini},
+  openreview = {S9jem2KZVr},
+  pages = {26:1--26:18},
+  section = {Poster Presentations},
+  software = {https://github.com/manfred-jaeger-aalborg/AHK},
+  title = {A Simple Latent Variable Model for Graph Learning and Inference}
+}
+
+@inproceedings{jur23a,
+  abstract = {Learning models that execute algorithms can enable us to address a key problem in deep learning: generalizing to out-of-distribution data. However, neural networks are currently unable to execute recursive algorithms because they do not have arbitrarily large memory to store and recall state. To address this, we (1) propose a way to augment graph neural networks (GNNs) with a stack, and (2) develop an approach for sampling intermediate algorithm trajectories that improves alignment with recursive algorithms over previous methods. The stack allows the network to learn to store and recall a portion of the state of the network at a particular time, analogous to the action of a call stack in a recursive algorithm. This augmentation permits the network to reason recursively. We empirically demonstrate that our proposals significantly improve generalization to larger input graphs over prior work on depth-first search (DFS).},
+  author = {Jonas J{\"u}r{\ss} and Dulhan Hansaja Jayalath and Petar Veli{\v c}kovi{\' c}},
+  openreview = {43M1bPorxU},
+  pages = {5:1--5:14},
+  section = {Oral Presentations},
+  software = {https://github.com/DJayalath/gnn-call-stack/},
+  title = {Recursive Algorithmic Reasoning}
+}
+
+@inproceedings{kunzli23a,
+  abstract = {Simulating fluid dynamics is crucial for the design and development process, ranging from simple valves to complex turbomachinery. Accurately solving the underlying physical equations is computationally expensive. Therefore, learning-based solvers that model interactions on meshes have gained interest due to their promising speed-ups. However, it is unknown to what extent these models truly understand the underlying physical principles and can generalize rather than interpolate. Generalization is a key requirement for a general-purpose fluid simulator, which should adapt to different topologies, resolutions, or thermodynamic ranges. We propose SURF, a benchmark designed to test the generalization of learned graph-based fluid simulators. SURF comprises individual datasets and provides specific performance and generalization metrics for evaluating and comparing different models. We empirically demonstrate the applicability of SURF by thoroughly investigating the two state-of-the-art graph-based models, yielding new insights into their generalization. SURF is available under https://github.com/s-kuenzli/surf-fluidsimulation.},
+  author = {Stefan K{\"u}nzli and Florian Gr{\"o}tschla and Jo{\"e}l Mathys and Roger Wattenhofer},
+  openreview = {lf22LaheVr},
+  pages = {13:1--13:23},
+  section = {Poster Presentations},
+  software = {https://github.com/s-kuenzli/surf-fluidsimulation},
+  title = {SURF: A Generalization Benchmark for GNNs Predicting Fluid Dynamics}
+}
+
+@inproceedings{lin23a,
+  abstract = {Fairness in graph neural networks has been actively studied recently. However, existing works often do not explicitly consider the role of message passing in introducing or amplifying the bias. In this paper, we first investigate the problem of bias amplification in message passing. We empirically and theoretically demonstrate that message passing could amplify the bias when the 1-hop neighbors
+from different demographic groups are unbalanced. Guided by such analyses, we propose BeMap, a fair message passing method, that leverages a balance-aware sampling strategy to balance the number of the 1-hop neighbors of each node among different demographic groups. Extensive experiments on node classification demonstrate the efficacy of BeMap in mitigating bias while maintaining classification accuracy.},
+  author = {Xiao Lin and Jian Kang and Weilin Cong and Hanghang Tong},
+  openreview = {4RiLDrCbzW},
+  pages = {37:1--37:25},
+  section = {Poster Presentations},
+  title = {BeMap: Balanced Message Passing for Fair Graph Neural Network}
+}
+
+
+@inproceedings{villar23a,
+  author = {Soledad Villar and Benjamin Chamberlain and Yuanqi Du and Hannes St"{a}rk and Chaitanya K. Joshi and Andreea Deac and Iulia Duta and Joshua Robinson and Yanqiao Zhu and Kexin Huang and Michelle Li and Sofia Bourhim and Ilia Igashov and Alexandre Duval and Mathieu Alain and Dominique Beaini and Xinyu Yuan},
+  pages = {i--xix},
+  section = {Preface},
+  title = {The Second Learning on Graphs Conference: Preface}
+}
+
+@inproceedings{loveland23a,
+  abstract = {Graph Neural Network (GNN) research has highlighted a relationship between high homophily (i.e., the tendency of nodes of the same class to connect) and strong predictive performance in node classification. However, recent work has found the relationship to be more nuanced, demonstrating that simple GNNs can learn in certain heterophilous settings. To resolve these conflicting findings and align closer to real-world datasets, we go beyond the assumption of a global graph homophily level and study the performance of GNNs when the local homophily level of a node deviates from the global homophily level. Through theoretical and empirical analysis, we systematically demonstrate how shifts in local homophily can introduce performance degradation, leading to performance discrepancies across local homophily levels. We ground the practical implications of this work through granular analysis on five real-world datasets with varying global homophily levels, demonstrating that (a) GNNs can fail to generalize to test nodes that deviate from the global homophily of a graph, and (b) high local homophily does not necessarily confer high performance for a node. We further show that GNNs designed for globally heterophilous graphs can alleviate performance discrepancy by improving performance across local homophily levels, offering a new perspective on how these GNNs achieve stronger global performance.},
+  author = {Donald Loveland and Jiong Zhu and Mark Heimann and Benjamin Fish and Michael T Schaub and Danai Koutra},
+  openreview = {3sPJt65hzO},
+  pages = {6:1--6:30},
+  section = {Oral Presentations},
+  title = {On Performance Discrepancies Across Local Homophily Levels in Graph Neural Networks}
+}
+
+@inproceedings{manchanda23a,
+  abstract = {Deep graph generative modeling has gained enormous attraction in recent years due to its impressive ability to directly learn the underlying hidden graph distribution. Despite their initial success, these techniques, like much of the existing deep generative methods, require a large number of training samples to learn a good model. Unfortunately, large number of training samples may not always be available in scenarios such as drug discovery for rare diseases. At the same time, recent advances in few-shot learning have opened door to applications where available training data is limited. In this work, we introduce the hitherto unexplored paradigm of  graph generative modeling under data scarcity. Towards this, we develop a meta-learning based framework for  labeled graph generative modeling under data scarcity. Our proposed model learns to transfer meta-knowledge from similar auxiliary graph datasets. Utilizing these prior experiences, our model quickly adapts to an unseen graph dataset through self-paced fine-tuning. Through extensive experiments on datasets from diverse domains having limited training samples, we establish that the proposed method generates graphs of superior fidelity compared to existing baselines.},
+  author = {Sahil Manchanda and Shubham Gupta and Sayan Ranu and Srikanta J. Bedathur},
+  openreview = {Hy9K2WiVwW},
+  pages = {32:1--32:18},
+  section = {Poster Presentations},
+  software = {https://github.com/idea-iitd/GShot/},
+  title = {Generative Modeling of Labeled Graphs Under Data Scarcity}
+}
+
+@inproceedings{mirjanic23a,
+  abstract = {Neural Algorithmic Reasoning (NAR) is a research area focused on designing neural architectures that can reliably capture classical computation, usually by learning to execute algorithms. A typical approach is to rely on Graph Neural Network (GNN) architectures, which encode inputs in high-dimensional latent spaces that are repeatedly transformed during the execution of the algorithm. In this work we perform a detailed analysis of the structure of the latent space induced by the GNN when executing algorithms. We identify two possible failure modes: (i) loss of resolution, making it hard to distinguish similar values; (ii) inability to deal with values outside the range observed during training. We propose to solve the first issue by relying on a softmax aggregator, and propose to decay the latent space in order to deal with out-of-range values. We show that these changes lead to improvements on the majority of algorithms in the standard CLRS-30 benchmark when using the state-of-the-art Triplet-GMPNN processor.},
+  author = {Vladimir V Mirjanic and Razvan Pascanu and Petar Veli{\v c}kovi{\' c}},
+  openreview = {tRP0Ydz5nN},
+  pages = {10:1--10:24},
+  section = {Poster Presentations},
+  software = {https://github.com/mirjanic/nar-latent-spaces},
+  title = {Latent Space Representations of Neural Algorithmic Reasoners}
+}
+
+@inproceedings{patankar23a,
+  abstract = {Intrinsically motivated exploration has proven useful for reinforcement learning, even without additional extrinsic rewards. When the environment is naturally represented as a graph, how to guide exploration best remains an open question. In this work, we propose a novel approach for exploring graph-structured data motivated by two theories of human curiosity: the information gap theory and the compression progress theory. The theories view curiosity as an intrinsic motivation to optimize for topological features of subgraphs induced by nodes visited in the environment. We use these proposed features as rewards for graph neural-network-based reinforcement learning. On multiple classes of synthetically generated graphs, we find that trained agents generalize to longer exploratory walks and larger environments than are seen during training. Our method computes more efficiently than the greedy evaluation of the relevant topological properties. The proposed intrinsic motivations bear particular relevance for recommender systems. We demonstrate that next-node recommendations considering curiosity are more predictive of human choices than PageRank centrality in several real-world graph environments.},
+  author = {Shubhankar Prashant Patankar and Mathieu Ouellet and Juan Cervino and Alejandro Ribeiro and Kieran A. Murphy and Danielle Bassett},
+  openreview = {XJpQnN4JNE},
+  pages = {23:1--23:15},
+  section = {Poster Presentations},
+  software = {https://github.com/spatank/curiosity-graphs},
+  title = {Intrinsically Motivated Graph Exploration Using Network Theories of Human Curiosity}
+}
+
+@inproceedings{pojer23a,
+  abstract = {Graph neural networks (GNNs) and statistical relational learning are two different approaches to learning with
+graph data. The former can provide highly accurate models for specific tasks when sufficient training
+  data is available, whereas the latter supports a wider range of reasoning types, and can incorporate
+  manual specifications of interpretable domain knowledge. In this paper we present a method to embed
+  GNNs in a statistical relational learning framework, such that the predictive model
+  represented by the GNN becomes part of a full generative model.  This model then  supports a wide range of queries,
+  including general conditional probability queries, and computing most probable configurations of
+  unobserved node attributes or edges.
+  In particular, we demonstrate how this latter type of queries can be used to obtain model-level
+  explanations of a GNN in a flexible and interactive manner.},
+  author = {Raffaele Pojer and Andrea Passerini and Manfred Jaeger},
+  openreview = {dxhasYAMQ4},
+  pages = {16:1--16:12},
+  section = {Poster Presentations},
+  title = {Generalized Reasoning With Graph Neural Networks by Relational Bayesian Network Encodings}
+}
+
+@inproceedings{rossi23a,
+  abstract = {Graph Neural Networks (GNNs) have become the de-facto standard tool for modeling relational data. However, while many real-world graphs are directed, the majority of today’s GNN models discard this information altogether by simply making the graph undirected. The reasons for this are historical: 1) many early variants of spectral GNNs explicitly required undirected graphs, and 2) the first benchmarks on homophilic graphs did not find significant gain from using direction. In this paper, we show that in heterophilic settings, treating the graph as directed increases the effective homophily of the graph, suggesting a potential gain from the correct use of directionality information. To this end, we introduce Directed Graph Neural Network (Dir-GNN), a novel general framework for deep learning on directed graphs. Dir-GNN can be used to extend any Message Passing Neural Network (MPNN) to account for edge directionality information by performing separate aggregations of the incoming and outgoing edges. We prove that Dir-GNN matches the expressivity of the Directed Weisfeiler-Lehman test, exceeding that of conventional MPNNs. In extensive experiments, we validate that while our framework leaves performance unchanged on homophilic datasets, it leads to large gains over base models such as GCN, GAT and GraphSage on heterophilic benchmarks, outperforming much more complex methods and achieving new state-of-the-art results. The code for the paper can be found at https://github.com/emalgorithm/directed-graph-neural-network.},
+  author = {Emanuele Rossi and Bertrand Charpentier and Francesco Di Giovanni and Fabrizio Frasca and Stephan G{\"u}nnemann and Michael M. Bronstein},
+  openreview = {T4LRbAMWFn},
+  pages = {25:1--25:27},
+  section = {Poster Presentations},
+  software = {https://github.com/emalgorithm/directed-graph-neural-network},
+  title = {Edge Directionality Improves Learning on Heterophilic Graphs}
+}
+
+@inproceedings{roth23a,
+  abstract = {Our study reveals new theoretical insights into over-smoothing and feature over-correlation in graph neural networks. Specifically, we demonstrate that with increased depth, node representations become dominated by a low-dimensional subspace that depends on the aggregation function but not on the feature transformations. For all aggregation functions, the rank of the node representations collapses, resulting in over-smoothing for particular aggregation functions. Our study emphasizes the importance for future research to focus on rank collapse rather than over-smoothing. Guided by our theory, we propose a sum of Kronecker products as a beneficial property that provably prevents over-smoothing, over-correlation, and rank collapse. We empirically demonstrate the shortcomings of existing models in fitting target functions of node classification tasks.},
+  author = {Andreas Roth and Thomas Liebig},
+  openreview = {9aIDdGm7a6},
+  pages = {35:1--35:23},
+  section = {Poster Presentations},
+  title = {Rank Collapse Causes Over-Smoothing and Over-Correlation in Graph Neural Networks}
+}
+
+@inproceedings{xu23a,
+  abstract = {In the field of graph machine learning, graph neural networks (GNNs) are promising models for learning graph representations and node representations. However, many GNNs perform poorly on learning higher-order representations such as links due to their limited expressive power. Zhang et al. summarize recent advances in link prediction and propose labeling trick as a common framework for learning node set representations with GNNs. However, their theory is limited to employing an ideally expressive GNN as the backend, and can only justify a limited series of link prediction models. In this paper, we take a further step to study the expressive power of various higher-order representation learning methods. Our analysis begins with showing the inherent symmetry between node labeling and higher-order GNNs, which directly justifies previous labeling trick methods (SEAL, GraIL) and other node labeling methods (ID-GNN, NBFNet), also higher-order GNNs through a unfied framework. Then, we study the utilization of MPNNs for computing representations in these methods, and show the expressive power upper bounds under these situations. After that, we provide a comprehensive analysis about how these previous methods surpass plain GNNs by showing their ability to capture path information. Finally, using the intuitions provided by the analysis, we propose an extremely simple method for link prediction tasks, which we believe could bring insights for designing more complicated and powerful models in the future.},
+  author = {Tuo Xu and Lei Zou},
+  openreview = {2OyoYw4InI},
+  pages = {38:1--38:25},
+  section = {Poster Presentations},
+  title = {Rethinking Higher-Order Representation Learning With Graph Neural Networks}
+}
+
+@inproceedings{yadati23a,
+  abstract = {The paper aims to explore the untapped potential of hypergraphs by leveraging attribute-rich and multi-layered structures.
+ The primary objective is to develop an innovative learning framework, Hypergraph Learning Enriched with
+Attributes and Layers (HEAL), capable of effectively harnessing the complex relationships and information present in such data representations.
+Hypergraphs offer a more expressive and versatile way to model intricate relationships in real-world systems, accommodating entities with multiple interactions and diverse attributes. However, existing learning methods often overlook these unique features, especially cross-layer interactions, hindering their full potential. 
+The motivation behind this research is to bridge this gap by creating HEAL, a novel learning approach that capitalises on attribute-rich and multi-layered hypergraphs to achieve superior performance across various applications.
+HEAL adopts a feature smoothing strategy to propagate attributes over the hypergraph structure, enabling the decoupling of feature propagation and transformation steps. 
+This innovative methodology allows HEAL to capture the intricacies of multi-layer interactions while efficiently handling attribute-rich data. 
+Moreover, the paper presents a detailed analysis of HEAL\textquotesingle s design and performance, showcasing its effectiveness in handling complex real-world datasets.
+The implications of HEAL are far-reaching and promising.
+By unlocking the potential of learning on hypergraphs enriched with attributes and layers, our work opens up new possibilities in various domains. 
+This research contributes to the advancement of graph-based learning methods, paving the way for more sophisticated and efficient approaches in real-world applications.},
+  author = {Naganand Yadati and Tarun Kumar and Deepak Maurya and Balaraman Ravindran and Partha Talukdar},
+  openreview = {BUj4BqjGC3},
+  pages = {34:1--34:25},
+  section = {Poster Presentations},
+  title = {HEAL: Unlocking the Potential of Learning on Hypergraphs Enriched With Attributes and Layers}
+}
+
+@inproceedings{yan23a,
+  abstract = {The Strong Lottery Ticket Hypothesis (SLTH) demonstrates the existence of high-performing subnetworks within a randomly initialized model, discoverable through pruning a convolutional neural network (CNN) without any weight training. A recent study, called Untrained GNNs Tickets (UGT), expanded SLTH from CNNs to shallow graph neural networks (GNNs). However, discrepancies persist when comparing baseline models with learned dense weights. Additionally, there remains an unexplored area in applying SLTH to deeper GNNs, which, despite delivering improved accuracy with additional layers, suffer from excessive memory requirements. To address these challenges, this work utilizes Multicoated Supermasks (M-Sup), a scalar pruning mask method, and implements it in GNNs by proposing a strategy for setting its pruning thresholds adaptively. In the context of deep GNNs, this research uncovers the existence of untrained recurrent networks, which exhibit performance on par with their trained feed-forward counterparts. This paper also introduces the Multi-Stage Folding and Unshared Masks methods to expand the search space in terms of both architecture and parameters. Through the evaluation of various datasets, including the Open Graph Benchmark (OGB), this work establishes a triple-win scenario for SLTH-based GNNs: by achieving high sparsity, competitive performance, and high memory efficiency with up to 98.7\textbackslash \% reduction, it demonstrates suitability for energy-efficient graph processing.},
+  author = {Jiale Yan and Hiroaki Ito and \'Angel L\'opez Garc\'ia-Arias and Yasuyuki Okoshi and Hikari Otsuka and Kazushi Kawamura and Thiem Van Chu and Masato Motomura},
+  openreview = {oLrNolMbO8},
+  pages = {11:1--11:18},
+  section = {Poster Presentations},
+  title = {Multicoated and Folded Graph Neural Networks With Strong Lottery Tickets}
+}
+
+@inproceedings{yan23b,
+  abstract = {Cycles are fundamental elements in graph-structured data and have demonstrated their effectiveness in enhancing graph learning models. To encode such information into a graph learning framework, prior works often extract a summary quantity, ranging from the number of cycles to the more sophisticated persistence diagram summaries. However, more detailed information, such as which edges are encoded in a cycle, has not yet been used in graph neural networks. In this paper, we make one step towards addressing this gap, and propose a structure encoding module, called CycleNet, that encodes cycle information via edge structure encoding in a permutation invariant manner. To efficiently encode the space of all cycles, we start with a cycle basis (i.e., a minimal set of cycles generating the cycle space) which we compute via the kernel of the 1-dimensional Hodge Laplacian of the input graph. To guarantee the encoding is invariant w.r.t. the choice of cycle basis, we encode the cycle information via the orthogonal projector of the cycle basis, which is inspired by BasisNet proposed by Lim et al. We also develop a more efficient variant which however requires that the input graph has a unique shortest cycle basis. To demonstrate the effectiveness of the proposed module, we provide some theoretical understandings of its expressive power. Moreover, we show via a range of experiments that networks enhanced by our CycleNet module perform better in various benchmarks compared to several existing SOTA models.},
+  author = {Zuoyu Yan and Tengfei Ma and Liangcai Gao and Zhi Tang and Chao Chen and Yusu Wang},
+  openreview = {7BQZyQERuP},
+  pages = {4:1--4:21},
+  section = {Oral Presentations},
+  title = {Cycle Invariant Positional Encoding for Graph Representation Learning}
+}
+
+@inproceedings{yu23a,
+  abstract = {Applications such as the analysis of microbiome data have led to renewed interest in statistical methods for compositional data, i.e., data in the form of relative proportions. In particular, there is considerable interest in modelling interactions among such  proportions. To this end we propose a class of exponential family models that accommodate arbitrary patterns of pairwise interaction. Special cases include Dirichlet distributions as well as Aitchison\textquotesingle s additive logistic normal distributions. Generally, the distributions we consider have a density that features a difficult-to-compute normalizing constant. To circumvent this issue, we design effective estimation methods based on generalized versions of score matching.},
+  author = {Shiqing Yu and Mathias Drton and Ali Shojaie},
+  openreview = {aRUhkrf0W4},
+  pages = {20:1--20:25},
+  section = {Poster Presentations},
+  software = {https://github.com/sqyu/genscore},
+  title = {Interaction Models and Generalized Score Matching for Compositional Data}
+}
+
+@inproceedings{zhen23a,
+  abstract = {Nowadays, graph neural networks (GNN) are the primary machinery to tackle (semi)-supervised graph classification tasks. The aim here is to predict classes for unlabeled graphs, given a collection of graphs with known labels.
+However, in many real-world applications the available information on graph classes may be distorted either due to incorrect labelling process (e.g., as in biochemistry and bioinformatics) or may be subject to targeted attacks (e.g., as in network-based customer attrition analytics). Over the past few years, the increasing number of studies has indicated that GNNs are prone both to noisy node and noisy graph labels, and while this problem has received noticeable attention for node classification tasks, vulnerability of GNNs for graph classification with perturbed graph labels still remains in its nascence. We hypothesise that this challenge can be addressed 
+by the universal principle {\textbackslash it United We Stand, Divided We Fall}. In particular, most GNNs view each graph as a standalone entity and, as a result, are limited in their abilities to account for complex interdependencies among the graphs. Inspired by the recent studies on molecular graph learning, we propose a new robust knowledge representation called {\textbackslash it Networks to Graph} (N2G). The key N2G idea is to construct a new abstraction where each graph in the collection is now represented by a node, while an edge then reflects some sort of similarity among the graphs. As a result, the graph classification task can be then naturally reformulated as a node classification problem. We show that the proposed N2G representation approach does not only improve classification performance both in binary and multi-class scenarios but also substantially enhances robustness against noisy labels in the training data, leading to relative robustness gains up to 11.7\textbackslash \% on social network benchmarks and up to 25.8\textbackslash \% on bioinformatics graph benchmarks under 10\textbackslash \% of graph label corruption rate.},
+  author = {Zhiwei Zhen and Yuzhou Chen and Murat Kantarcioglu and Kangkook Jee and Yulia Gel},
+  openreview = {K5g021Ex14},
+  pages = {30:1--30:19},
+  section = {Poster Presentations},
+  title = {United We Stand, Divided We Fall: Networks to Graph (N2G) Abstraction for Robust Graph Classification Under Graph Label Corruption}
+}
+
+@inproceedings{zou23a,
+  abstract = {Graph generation poses a significant challenge as it involves predicting a complete graph with multiple nodes and edges based on simply a given label. This task also carries fundamental importance to numerous real-world applications, including de-novo drug and molecular design. In recent years, several successful methods have emerged in the field of graph generation. However, these approaches suffer from two significant shortcomings: (1) the underlying Graph Neural Network (GNN) architectures used in these methods are often underexplored; and (2) these methods are often evaluated on only a limited number of metrics. To fill this gap, we investigate the expressiveness of GNNs under the context of the molecular graph generation task, by replacing the underlying GNNs of graph generative models with more expressive GNNs. Specifically, we analyse the performance of six GNNs in two different generative frameworks\textemdash autoregressive generation models, such as GCPN and GraphAF, and one-shot generation models, such as GraphEBM\textemdash on six different molecular generative objectives on the ZINC-250k dataset. Through our extensive experiments, we demonstrate that advanced GNNs can indeed improve the performance of GCPN, GraphAF, and GraphEBM on molecular generation tasks, but GNN expressiveness is not a necessary condition for a good GNN-based generative model. Moreover, we show that GCPN and GraphAF with advanced GNNs can achieve state-of-the-art results across 17 other non-GNN-based graph generative approaches, such as variational autoencoders and Bayesian optimisation models, on the proposed molecular generative objectives (DRD2, Median1, Median2), which are important metrics for de-novo molecular design.},
+  author = {Xiandong Zou and Xiangyu Zhao and Pietro Lio and Yiren Zhao},
+  openreview = {aBL9SfWVJb},
+  pages = {21:1--21:26},
+  section = {Poster Presentations},
+  title = {Will More Expressive Graph Neural Networks Do Better on Generative Tasks?}
+}
